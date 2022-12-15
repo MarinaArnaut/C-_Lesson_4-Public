@@ -9,12 +9,15 @@
 Console.Write("Введите число: ");
 int num = int.Parse(Console.ReadLine()!);
 int sum = 0;
+int abs = 0;
 int GetSumNumb(int num)
 {
     for (int i = 0; num >= 10; i++)
     {
-        num = num % 10;
-        sum = sum + num;
+        abs = num / 10;
+        abs = abs % 10;
+        sum = sum + abs;
+        num--;
     }
     return sum;
 }
