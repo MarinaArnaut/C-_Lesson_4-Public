@@ -8,7 +8,7 @@ Console.WriteLine("Програма задает массив из 8 элеме�
 int[] CreateArray(int size)
 {
     int[] array = new int[size];
-    for (int i = 0, i < Array.Lenght; i++)
+    for (int i = 0; i < size; i++)
     {
         array[i] = new Random().Next(-99, 100);
     }
@@ -17,12 +17,13 @@ int[] CreateArray(int size)
 
 void PrintArray(int[] array)
 {
-    for (int i = 0, i< Array.Lenght; i++)
+    for (int i = 0; i < array.Length - 1; i++)
     {
-        Console.Write(array[i] + " , ");
+        Console.Write(array[i] + ", ");
     }
-    Console.Write(array[7] + " . ");
+    Console.Write(array[7] + ". ");
 }
 
 Console.Write("Сгенерированный массив: ");
+
 PrintArray(CreateArray(8));
