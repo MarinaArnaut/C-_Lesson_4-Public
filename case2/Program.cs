@@ -8,18 +8,17 @@
 
 Console.Write("Введите число: ");
 int num = int.Parse(Console.ReadLine()!);
-int sum = 0;
-int abs = 0;
 int GetSumNumb(int num)
 {
-    for (int i = 0; num >= 10; i++)
+    int sum = 0;
+    int abs = 0;
+    while (num > 0)
     {
-        abs = num / 10;
-        abs = abs % 10;
+        abs = num % 10;
         sum = sum + abs;
-        num--;
+        num = num / 10;
     }
     return sum;
 }
 
-Console.WriteLine($"Сумма цифр в числе = {GetSumNumb(sum)}");
+Console.WriteLine($"Сумма цифр в числе = {GetSumNumb(num)}");
